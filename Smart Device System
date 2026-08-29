@@ -1,0 +1,48 @@
+interface SmartDevice {
+    void turnOn();
+    void turnOff();
+}
+class Light implements SmartDevice {
+    @Override
+    public void turnOn() {
+        System.out.println("Light turned ON");
+    }
+    @Override
+    public void turnOff() {
+        System.out.println("Light turned OFF");
+    }
+}
+class Fan implements SmartDevice {
+    @Override
+    public void turnOn() {
+        System.out.println("Fan turned ON");
+    }
+    @Override
+    public void turnOff() {
+        System.out.println("Fan turned OFF");
+    }
+}
+class AirConditioner implements SmartDevice {
+    @Override
+    public void turnOn() {
+        System.out.println("Air Conditioner turned ON");
+    }
+    @Override
+    public void turnOff() {
+        System.out.println("Air Conditioner turned OFF");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        SmartDevice device;
+        device = new Light();
+        device.turnOn();
+        device.turnOff();
+        device = new Fan();
+        device.turnOn();
+        device.turnOff();
+        device = new AirConditioner();
+        device.turnOn();
+        device.turnOff();
+    }
+}
