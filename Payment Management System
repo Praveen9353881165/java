@@ -1,0 +1,36 @@
+public void calculateSalary() {
+        System.out.println("Calculating salary for a general employee...");
+    }
+}
+class FullTimeEmployee extends Employee { 
+    @Override
+    public void calculateSalary() {    
+        int salary = 5000 + 1000; 
+        System.out.println("Full-Time Employee Salary: $" + salary);
+    }
+}
+class PartTimeEmployee extends Employee {  
+    @Override
+    public void calculateSalary() { 
+        int salary = 20 * 80; 
+        System.out.println("Part-Time Employee Salary: $" + salary);
+    }
+}
+class Intern extends Employee {
+    @Override
+    public void calculateSalary() {   
+        int stipend = 1000; 
+        System.out.println("Intern Stipend: $" + stipend);
+    }
+}
+public class Main {
+    public static void main(String[] args) {  
+        Employee emp; 
+        emp = new FullTimeEmployee();
+        emp.calculateSalary();
+        emp = new PartTimeEmployee();
+        emp.calculateSalary();      
+        emp = new Intern();
+        emp.calculateSalary();
+    }
+}
